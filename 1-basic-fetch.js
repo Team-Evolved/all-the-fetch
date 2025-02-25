@@ -1,7 +1,9 @@
 //the simplest fetch you can use and still have error handling
 const url = 'https://jsonplaceholder.typicode.com/users';
 
-
+export function getData(){
+    fetch('https://jsonplaceholder.typicode.com/users')
+}
 
 
 
