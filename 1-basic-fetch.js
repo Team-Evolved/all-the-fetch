@@ -10,9 +10,8 @@ export function getData(){
         //error checking code -200 to 299
         if(! response.ok) throw new Error('You have an error')
             return response.json(); // method to extract Json string & converts to a Object
-
-    })
-    .then()
+        })
+    .then((dataobj)=>{ console.log(dataobj)})
     .catch(err =>{console.warn(err.message)})
 
   
