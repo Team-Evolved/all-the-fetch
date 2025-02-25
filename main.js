@@ -65,3 +65,4 @@ Bonus: Measuring Download progress
 
 getData();
 // setData();
+console.log(getData);

@@ -2,9 +2,10 @@
 const url = 'https://jsonplaceholder.typicode.com/users';
 
 export function getData(){
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch(url)
 }
 
+console.log(url);
 
 
 
