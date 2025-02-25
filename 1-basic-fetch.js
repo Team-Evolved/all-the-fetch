@@ -12,9 +12,7 @@ export function getData(){
             return response.json(); // method to extract Json string & converts to a Object
         })
     .then((dataobj)=>{ console.log(dataobj)})
-    .catch(err =>{console.warn(err.message)})
-
-  
+    .catch(err =>{console.warn(err.message)}) 
 }
 
 function addTwo(response){}
@@ -103,10 +101,15 @@ function addTwo(response){}
 //       console.warn(err.message);
 //     });
 
-//   //The code below will always fail.
-//   // let response = fetch(url);
-//   // let dataobj = response.json();
-//   // console.log(dataobj);
+//  The code below will always fail. ?????
+//  Fetch() always returns a Promise Object \/ so response needs the
+//  other .then method to change the awaited Json Data string to be 
+//  Changed to a JavaScript Object as an array below without the Promise is only 
+//  declaring response as a variable!! 
+
+//  let response = fetch(url);
+//  let dataobj = response.json();
+//  console.log(dataobj);
 // }
 
 // function fred(resp) {}
