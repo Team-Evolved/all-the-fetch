@@ -1,21 +1,18 @@
 //the simplest fetch you can use and still have error handling
 const url = 'https://jsonplaceholder.typicode.com/users';
 
-let msg = [
-    {name:'Bill'},
-     {name:'Joey'}
-]
 export function getData(){
+   
     fetch(url)
     .then((response) =>{
         //console.log(response);
         //console.log(response.status)
         //error checking code -200 to 299
-        if(! response.ok) throw new Error(`You have an error${msg[0].name}`)
+        if(! response.ok) throw new Error(`You have an error`)
 
     })
     .then()
-    .catch(err =>{console.warn(err.message)})
+    .catch(err =>{console.warn(err.message[0])})
 
   
 }
