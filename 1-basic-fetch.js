@@ -1,11 +1,29 @@
 //the simplest fetch you can use and still have error handling
 const url = 'https://jsonplaceholder.typicode.com/users';
 
+let msg = [
+    {name:'Bill'},
+     {name:'Joey'}
+]
 export function getData(){
     fetch(url)
+    .then((response) =>{
+        //console.log(response);
+        //console.log(response.status)
+        //error checking code -200 to 299
+        if(! response.ok) throw new Error(`You have an error${msg[0].name}`)
+
+    })
+    .then()
+    .catch(err =>{console.warn(err.message)})
+
+  
 }
 
-console.log(url);
+function addTwo(response){}
+
+//function add(`this is the "variable" response Object from fetch`){}
+//callback function =>(`this is the "variable" response Object from fetch`)
 
 
 
