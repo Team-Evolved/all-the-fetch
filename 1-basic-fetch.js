@@ -8,11 +8,12 @@ export function getData(){
         //console.log(response);
         //console.log(response.status)
         //error checking code -200 to 299
-        if(! response.ok) throw new Error(`You have an error`)
+        if(! response.ok) throw new Error('You have an error')
+            return response.json(); // method to extract Json string & converts to a Object
 
     })
     .then()
-    .catch(err =>{console.warn(err.message[0])})
+    .catch(err =>{console.warn(err.message)})
 
   
 }
